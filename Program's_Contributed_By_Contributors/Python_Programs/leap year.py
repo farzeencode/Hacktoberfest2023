@@ -1,16 +1,8 @@
-# Check leap year
+# Input: Year
+year = int(input("Enter a year: "))
 
-def leap_year_check(yr):
-    leap = False
-    if yr % 4 == 0:
-        leap = True
-        if yr % 100 ==0 and yr % 400 != 0:
-            leap = False
-        else: 
-            leap = True
-    if leap: 
-        print("{0} is a leap year".format(yr))
-    else: 
-        print("{0} is not a leap year".format(yr))
-
-leap_year_check(1700)
+# Check if it's a leap year
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(year, "is a leap year.")
+else:
+    print(year, "is not a leap year.")
